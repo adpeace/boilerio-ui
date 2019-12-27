@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="flame.svg"
+   inkscape:export-filename="/home/andy/reactui/react-app/flame.svg.png"
+   inkscape:export-xdpi="139.95915"
+   inkscape:export-ydpi="139.95915">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="290.9048"
+     inkscape:cy="834.54643"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-nodes="false"
+     inkscape:window-width="1853"
+     inkscape:window-height="1145"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path817"
+       style="fill:none;stroke:#999999;stroke-width:0.22473532px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 67.542128,103.28103 c 0,0 1.937048,-1.96149 2.936268,-7.84126 0.99922,-5.879768 -4.872256,-13.522762 -4.872256,-13.522762 0,0 -1.249557,12.069 -3.247997,10.418535 -1.99844,-1.650456 -3.095127,-19.542819 -3.095127,-19.542819 0,0 -4.623908,5.029117 -6.24764,12.559349 -1.623732,7.530234 3.489431,17.928777 3.489431,17.928777 l -6.875491,0.007 c 0,0 -8.776748,-12.821326 -7.40282,-24.065095 1.373927,-11.243771 21.770975,-40.87669 21.770975,-40.87669 0,0 -0.782895,13.772611 5.212425,24.50061 5.995321,10.728002 11.05838,17.499674 11.05838,24.61729 0,7.117616 -8.378528,15.823885 -8.378528,15.823885 v 0 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccscssccc"
+       inkscape:export-filename="/home/andy/reactui/react-app/public/noflame.png"
+       inkscape:export-xdpi="139.52074"
+       inkscape:export-ydpi="139.52074" />
+  </g>
+</svg>
