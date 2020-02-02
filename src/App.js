@@ -15,6 +15,7 @@ import axios from 'axios';
 
 import ZoneCard from './ZoneCard';
 import Schedule from './Schedule';
+import SensorsCard from './Sensors';
 
 import './App.css';
 
@@ -98,6 +99,7 @@ function App() {
 
         fetchData();
     }, [refresh]);
+
     const zonecards = zones.map((z) => 
         <ZoneCard name={z.name} zoneId={z.zone_id}
             temp={Math.round(z.reported_state.current_temp * 10) / 10}
@@ -138,6 +140,8 @@ function App() {
             <Container maxWidth="sm" className={classes.container}>
                 {activeTab === 0 ? zonecards : <></> }
                 {activeTab === 1 ? scheduleCards : <></> }
+
+                {activeTab === 0 ? <SensorsCard refresh={refresh} /> : <></> }
             </Container>
 
             <BottomNavigation value={activeTab} 
