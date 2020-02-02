@@ -125,7 +125,7 @@ export default function ZoneCard(props) {
     }))();
 
     /* Card expansion to show override */
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
