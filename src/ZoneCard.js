@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardContent, Tooltip, Collapse,
          CardActions, TextField, Button, 
          Grid } from '@material-ui/core';
+import { Alert } from '@material-ui/lab';
 
 import axios from 'axios';
 
@@ -34,6 +35,17 @@ function TemperatureDisplay(props) {
             color: props.displaytype === "target" ? "gray" : "black",
         },
     })();
+
+    if (props.temp === null)
+        return (<div className={classes.temperatureDisplay}>
+            <Typography variant="h4">
+                ?
+            </Typography>
+            <Typography>
+                { props.reachin }
+            </Typography>
+        </div>)
+
     return (
         <div className={classes.temperatureDisplay}>
             <Typography variant="h4">
@@ -164,6 +176,16 @@ export default function ZoneCard(props) {
                   title={props.name}
                 />
                 <CardContent>
+                    {
+                        (props.temp === null || props.boilerState === "Unknown")
+                            ?
+                                <Alert severity="warning">
+                                This zone isn't currently operating.
+                                If this problem persists, please check
+                                sensor batteries and software.
+                                </Alert>
+                            : <></>
+                      }
                     <div className={classes.container}>
                         <TemperatureDisplay temp={props.temp} reachin="current"/>
                         <TemperatureDisplay displaytype="target" temp={props.target} reachin={reachin_text}/>
