@@ -3,7 +3,7 @@ import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardContent, Tooltip, Collapse,
-         CardActions, TextField, Button, 
+         CardActions, TextField, Button,
          Grid } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
 
@@ -121,7 +121,7 @@ function ConfigureOverride(props) {
  */
 export default function ZoneCard(props) {
     const classes = makeStyles(theme => ({
-        card: { 
+        card: {
             marginTop: 10,
         },
         cardHeader: {
@@ -134,6 +134,9 @@ export default function ZoneCard(props) {
         container: {
             display: "flex",
         },
+        alertbox: {
+            marginBottom: 10,
+        }
     }))();
 
     /* Card expansion to show override */
@@ -160,7 +163,7 @@ export default function ZoneCard(props) {
                 'api/zones/' + props.zoneId + '/override',
                 formData);
             props.reload();
-            
+
             // close the override panel:
             setExpanded(false);
         } catch (error) {
@@ -177,9 +180,11 @@ export default function ZoneCard(props) {
                 />
                 <CardContent>
                     {
-                        (props.temp === null || props.boilerState === "Unknown")
+                        (props.temp === null ||
+                            props.boilerState === "Unknown" ||
+                            props.boilerState === "Stale")
                             ?
-                                <Alert severity="warning">
+                                <Alert className={classes.alertbox} severity="warning">
                                 This zone isn't currently operating.
                                 If this problem persists, please check
                                 sensor batteries and software.
@@ -199,7 +204,7 @@ export default function ZoneCard(props) {
                         { props.targetOverride ? (
                             <Typography>
                                 Override: {props.targetOverride.temp}&deg;C
-                                until {(new Date(props.targetOverride.until)).toLocaleTimeString([], 
+                                until {(new Date(props.targetOverride.until)).toLocaleTimeString([],
                                             {hour: '2-digit', minute:'2-digit'})}
                             </Typography>
                           ) : (
@@ -210,7 +215,7 @@ export default function ZoneCard(props) {
                 </Collapse>
 
                 <Collapse in={expanded}>
-                    <ConfigureOverride 
+                    <ConfigureOverride
                         submitOverride={submitOverride}/>
                     <Divider variant="fullWidth" />
                 </Collapse>
