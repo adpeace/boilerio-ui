@@ -10,6 +10,9 @@ import { Alert } from '@material-ui/lab';
 import axios from 'axios';
 
 import './App.css';
+const axios_inst = axios.create({
+        headers: {"X-Requested-With": "axios"}
+    });
 
 function BoilerDisplay(props) {
     const image = props.mode === "On" ? "blackflame.png" :
@@ -147,7 +150,7 @@ export default function ZoneCard(props) {
 
     const clearOverride = async() => {
         try {
-            const result = await axios.delete(
+            const result = await axios_inst.delete(
                 'api/zones/' + props.zoneId + '/override');
             props.reload();
         } catch (error) {
@@ -159,7 +162,7 @@ export default function ZoneCard(props) {
         formData.set('temp', temp);
         formData.set('hours', hours);
         try {
-            const result = await axios.post(
+            const result = await axios_inst.post(
                 'api/zones/' + props.zoneId + '/override',
                 formData);
             props.reload();

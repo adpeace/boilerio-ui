@@ -8,6 +8,9 @@ import { Card, CardHeader, CardContent,
     Table, TableHead, TableBody, TableRow, TableCell,
     makeStyles } from '@material-ui/core';
 import axios from 'axios';
+const axios_inst = axios.create({
+        headers: {"X-Requested-With": "axios"}
+    });
 
 export default function SensorsCard(props) {
     const classes = makeStyles(theme => ({
@@ -29,11 +32,11 @@ export default function SensorsCard(props) {
         const fetchData = async () => {
             try {
                 /* get sensors, then for each get the last readings */
-                const result = await axios.get('api/sensor');
+                const result = await axios_inst.get('api/sensor/');
                 setSensors(result.data);
 
                 const readings = await Promise.all(result.data.map(async sensor => {
-                        const lastResults = await axios.get('api/sensor/' + sensor.sensor_id + '/readings');
+                        const lastResults = await axios_inst.get('api/sensor/' + sensor.sensor_id + '/readings');
                         return lastResults.data.map(x => ({"sensor_id": sensor.sensor_id, ...x}));
                 }));
                 setSensorReadings([].concat.apply([], readings));
