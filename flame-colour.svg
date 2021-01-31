@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="flame-colour.svg"
+   inkscape:export-filename="/home/andy/reactui/boilerio-ui/appicon.png"
+   inkscape:export-xdpi="130.99722"
+   inkscape:export-ydpi="130.99722">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient930">
+      <stop
+         style="stop-color:#ced2da;stop-opacity:1"
+         offset="0"
+         id="stop926" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop928" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient908">
+      <stop
+         style="stop-color:#ffbe9a;stop-opacity:1"
+         offset="0"
+         id="stop904" />
+      <stop
+         style="stop-color:#ffc400;stop-opacity:1"
+         offset="1"
+         id="stop906" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient842">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop838" />
+      <stop
+         style="stop-color:#a10000;stop-opacity:1"
+         offset="1"
+         id="stop840" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient842"
+       id="linearGradient844-3"
+       x1="63.340641"
+       y1="57.990192"
+       x2="76.092484"
+       y2="125.07711"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-47.684524,-11.004306)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient908"
+       id="linearGradient896"
+       x1="11.014484"
+       y1="64.446877"
+       x2="15.90209"
+       y2="118.70435"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient930"
+       id="linearGradient932"
+       x1="31.313883"
+       y1="45.875576"
+       x2="97.418434"
+       y2="111.98013"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="-54.08191"
+     inkscape:cy="394.19781"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-nodes="false"
+     inkscape:window-width="1713"
+     inkscape:window-height="1216"
+     inkscape:window-x="596"
+     inkscape:window-y="70"
+     inkscape:window-maximized="0"
+     inkscape:document-rotation="0"
+     inkscape:snap-bbox="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g876"
+       transform="translate(46.846729,11.651954)"
+       inkscape:export-xdpi="140.25443"
+       inkscape:export-ydpi="140.25443">
+      <path
+         id="rect831"
+         style="fill:url(#linearGradient896);fill-opacity:1;stroke:none;stroke-width:1.23807;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 11.572553,61.781169 c 0,0 -4.623948,5.028689 -6.24768,12.558921 -1.623732,7.530235 3.4891926,17.92914 3.4891926,17.92914 l -5.6415172,0.0057 v 0.01395 H 23.673624 v -0.01395 l -3.821991,-0.0057 c 0,0 1.937035,-1.961613 2.936255,-7.841382 0.999221,-5.879769 -4.872053,-13.52269 -4.872053,-13.52269 0,0 -1.249942,12.06895 -3.248382,10.418487 -1.99844,-1.650457 -3.0949,-19.542476 -3.0949,-19.542476 z" />
+      <path
+         id="path817-5"
+         style="fill:url(#linearGradient844-3);fill-opacity:1;stroke:none;stroke-width:0.224735px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 19.857606,92.276724 c 0,0 1.937049,-1.961488 2.936269,-7.84126 0.99922,-5.879767 -4.872257,-13.522762 -4.872257,-13.522762 0,0 -1.249557,12.069001 -3.247997,10.418535 -1.99844,-1.650455 -3.095127,-19.542818 -3.095127,-19.542818 0,0 -4.6239084,5.029115 -6.2476404,12.559347 -1.623732,7.530235 3.489431,17.928778 3.489431,17.928778 l -6.875491,0.007 c 0,0 -8.776748,-12.821328 -7.40282,-24.065095 1.373927,-11.243769 21.7709754,-40.87669 21.7709754,-40.87669 0,0 -0.782895,13.772611 5.212426,24.50061 5.995321,10.728002 11.05838,17.499674 11.05838,24.617291 0,7.117614 -8.378529,15.823885 -8.378529,15.823885 v 0 z"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cscccsccscssccc"
+         inkscape:export-filename="/home/andy/reactui/react-app/public/noflame.png"
+         inkscape:export-xdpi="139.52074"
+         inkscape:export-ydpi="139.52074" />
+    </g>
+  </g>
+</svg>
