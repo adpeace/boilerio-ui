@@ -14,7 +14,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 
 function ScheduleRow(props) {
-    return ( 
+    return (
         <TableRow>
             <TableCell>{props.time}</TableCell>
             <TableCell>{props.temp}&deg;C</TableCell>
@@ -24,7 +24,7 @@ function ScheduleRow(props) {
                 </IconButton>
             </TableCell>
         </TableRow>
-    )
+    );
 }
 
 export default function HeatingSchedule(props) {
@@ -45,7 +45,7 @@ export default function HeatingSchedule(props) {
             minWidth: 40,
         },
     }))(Tab);
-    
+
     function tabClick(ev, newValue) {
         setDay(newValue);
     }
@@ -75,17 +75,19 @@ export default function HeatingSchedule(props) {
                 <CardContent>
                     <Tabs variant="scrollable" scrollButtons="auto" value={day} indicatorColor="primary" textColor="primary" onChange={tabClick}>
                     {
-                        [{l: 'Mo', v:0}, {l: 'Tu', v:1}, {l:'We', v:2}, {l:'Th', v:3}, 
-                        {l: 'Fr', v:4}, {l: 'Sa', v:5}, {l:'Su', v:6}].map(weekday => 
-                            <DayTab label={weekday.l} value={weekday.v} />
+                        [{l: 'Mo', v:0}, {l: 'Tu', v:1}, {l:'We', v:2}, {l:'Th', v:3},
+                        {l: 'Fr', v:4}, {l: 'Sa', v:5}, {l:'Su', v:6}].map(weekday =>
+                            <DayTab key={"day_" + weekday.v} label={weekday.l} value={weekday.v} />
                         )
                     }
                     </Tabs>
                     <Table>
                         <TableHead>
-                            <TableCell>Time</TableCell>
-                            <TableCell>Target</TableCell>
-                            <TableCell />
+                            <TableRow>
+                                <TableCell>Time</TableCell>
+                                <TableCell>Target</TableCell>
+                                <TableCell />
+                            </TableRow>
                         </TableHead>
                         <TableBody>
                             {
@@ -93,6 +95,7 @@ export default function HeatingSchedule(props) {
                                     .map(entry => {
                                     return (
                                         <ScheduleRow
+                                            key={"schedule_entry_" + entry.time}
                                             time={entry.time}
                                             temp={entry.temp}
                                             deleteClick={deleteClickGen(entry.day, entry.time, props.zoneId)}
@@ -100,19 +103,19 @@ export default function HeatingSchedule(props) {
                                     )
                                 })
                             }
-                            <TableRow>
+                            <TableRow key="edit">
                                 <TableCell>
-                                <KeyboardTimePicker
-                                    id="time-picker"
-                                    label="Time picker"
-                                    value={newTime} onChange={setNewTime}
-                                    KeyboardButtonProps={{
-                                        'aria-label': 'change time',
-                                    }}
-                                    />
+                                    <KeyboardTimePicker
+                                        id="time-picker"
+                                        label="Time picker"
+                                        value={newTime} onChange={setNewTime}
+                                        KeyboardButtonProps={{
+                                            'aria-label': 'change time',
+                                        }}
+                                        />
                                 </TableCell>
                                 <TableCell>
-                                    <TextField 
+                                    <TextField
                                         label="Temperature (&deg;C)"
                                         type="number"
                                         value={newTemp} onChange={handleNewTemp}

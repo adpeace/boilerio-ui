@@ -61,14 +61,16 @@ export default function SensorsCard(props) {
             <CardHeader title="Temperature readings" />
                 <Table>
                     <TableHead>
-                        <TableCell>Sensor</TableCell>
-                        <TableCell align="right">Reading</TableCell>
+                        <TableRow>
+                            <TableCell>Sensor</TableCell>
+                            <TableCell align="right">Reading</TableCell>
+                        </TableRow>
                     </TableHead>
                     <TableBody>
                         {
                             sensors.map(sensor =>
                                 (
-                                    <TableRow>
+                                    <TableRow key={sensor.sensor_id}>
                                         <TableCell>{sensor.name}</TableCell>
                                         <TableCell align="right">
                                             {getReading(sensor.sensor_id, 'temperature')}&deg;C
