@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import { Routes, Route, HashRouter }
     from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar'
@@ -37,7 +36,7 @@ function App() {
     /* Authentication-related state: */
     const [authRequired, setAuthRequired] = useState(false);
     const [profilePicture, setProfilePicture] = useState(null);
-    const [logoutError, showLogoutError] = useState(false);
+    const [, showLogoutError] = useState(false);
 
     /* For logout */
     const handleLogout = () => {

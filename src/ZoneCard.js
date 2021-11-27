@@ -150,7 +150,7 @@ export default function ZoneCard(props) {
 
     const clearOverride = async() => {
         try {
-            const result = await axios_inst.delete(
+            await axios_inst.delete(
                 'api/zones/' + props.zoneId + '/override');
             props.reload();
         } catch (error) {
@@ -162,7 +162,7 @@ export default function ZoneCard(props) {
         formData.set('temp', temp);
         formData.set('hours', hours);
         try {
-            const result = await axios_inst.post(
+            await axios_inst.post(
                 'api/zones/' + props.zoneId + '/override',
                 formData);
             props.reload();

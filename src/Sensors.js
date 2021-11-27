@@ -4,7 +4,7 @@
 */
 
 import React, { useState, useEffect } from 'react';
-import { Card, CardHeader, CardContent,
+import { Card, CardHeader,
     Table, TableHead, TableBody, TableRow, TableCell,
     makeStyles } from '@material-ui/core';
 import axios from 'axios';
@@ -62,28 +62,28 @@ export default function SensorsCard(props) {
     return (
         <Card className={classes.card}>
             <CardHeader title="Temperature readings" />
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Sensor</TableCell>
-                            <TableCell align="right">Reading</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {
-                            sensors.map(sensor =>
-                                (
-                                    <TableRow key={sensor.sensor_id}>
-                                        <TableCell>{sensor.name}</TableCell>
-                                        <TableCell align="right">
-                                            {getReading(sensor.sensor_id, 'temperature')}&deg;C
-                                        </TableCell>
-                                    </TableRow>
-                                )
+            <Table>
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Sensor</TableCell>
+                        <TableCell align="right">Reading</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {
+                        sensors.map(sensor =>
+                            (
+                                <TableRow key={sensor.sensor_id}>
+                                    <TableCell>{sensor.name}</TableCell>
+                                    <TableCell align="right">
+                                        {getReading(sensor.sensor_id, 'temperature')}&deg;C
+                                    </TableCell>
+                                </TableRow>
                             )
-                        }
-                    </TableBody>
-                </Table>
+                        )
+                    }
+                </TableBody>
+            </Table>
         </Card>
     )
  }
