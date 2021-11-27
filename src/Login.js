@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -44,7 +44,7 @@ export function Login(props) {
 
     // Redirect if authentication is done:
     if (!props.authRequired)
-        return <Redirect to="/" />;
+        return <Navigate to="/" />;
 
     return (
         <div className={classes.content}>

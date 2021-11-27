@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { Switch, Route, HashRouter }
+import { Routes, Route, HashRouter }
     from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar'
@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-
 import RefreshIcon from '@material-ui/icons/Refresh';
 
 import axios from 'axios';
@@ -18,19 +17,12 @@ import axios from 'axios';
 import { Overview } from './Overview';
 import { Login } from './Login';
 import { ProfileButton } from './ProfileButton';
+import { RequireAuth } from './RequireAuth';
 import './App.css';
 
 const axios_inst = axios.create({
         headers: {"X-Requested-With": "axios"}
     });
-
-const ProtectedRoute = ({children, authRequired, ...rest}) => {
-    return (
-        <Route {...rest}>
-            {!authRequired ? children : <Redirect to="/login" />}
-        </Route>
-    );
-};
 
 function App() {
     const classes = makeStyles(theme => ({
@@ -104,16 +96,18 @@ function App() {
             </AppBar>
 
             <HashRouter>
-                <Switch>
-                    <Route path="/login">
+                <Routes>
+                    <Route path="/login" element={
                         <Login
                             authRequired={authRequired} setAuthRequired={setAuthRequired}
                             />
-                    </Route>
-                    <ProtectedRoute authRequired={authRequired} path="/">
-                        <Overview refresh={refresh} reload={reload}/>
-                    </ProtectedRoute>
-                </Switch>
+                    } />
+                    <Route path="/" element={
+                        <RequireAuth authRequired={authRequired} redirectTo="/login">
+                            <Overview refresh={refresh} reload={reload}/>
+                        </RequireAuth>
+                    } />
+                </Routes>
             </HashRouter>
         </>
     );

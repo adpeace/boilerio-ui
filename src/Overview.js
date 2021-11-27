@@ -85,6 +85,7 @@ export function Overview(props) {
                     return {zone_id: zone.zone_id, name: zone.name, schedule: schedres.data};
                 })));
             } catch (error) {
+                console.debug(error);
                 setIsError(true);
             }
         };
@@ -121,10 +122,10 @@ export function Overview(props) {
     return (
         <>
             <Container maxWidth="sm" className={classes.container}>
-                {activeTab === 0 ? zonecards : <></> }
-                {activeTab === 1 ? scheduleCards : <></> }
+                {activeTab === 0 ? zonecards : null }
+                {activeTab === 1 ? scheduleCards : null }
 
-                {activeTab === 0 ? <SensorsCard refresh={props.refresh} /> : <></> }
+                {activeTab === 0 ? <SensorsCard refresh={props.refresh} /> : null }
             </Container>
             <BottomNavigation value={activeTab}
                 showLabels onChange={changeTab}
