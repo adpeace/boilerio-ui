@@ -39,6 +39,7 @@ export function Login(props) {
         complete_auth();
     };
     function loginFailure(d) {
+        console.log("Client-side login failure: " + JSON.stringify(d));
         setLoginError(true);
     };
 
@@ -53,7 +54,7 @@ export function Login(props) {
                 gutterBottom={true}
                 >Please log in to use BoilerIO.</Typography>
             <GoogleLogin
-                clientId="338550409596-e57aak0i5sc6mtdmoq8tp8gihuu0p18p.apps.googleusercontent.com"
+                clientId="338550409596-dm6oma99fn02brpoi106pemcujs161al.apps.googleusercontent.com"
                 buttonText="Log in with Google"
                 onSuccess={loginSuccess}
                 onFailure={loginFailure}
