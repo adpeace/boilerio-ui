@@ -32,6 +32,7 @@ function App() {
 
     const [refresh, setRefresh] = useState(0);
     const reload = () => {setRefresh(!refresh)};
+    const onFocus = () => setRefresh(1);
 
     /* Authentication-related state: */
     const [authRequired, setAuthRequired] = useState(false);
@@ -72,6 +73,12 @@ function App() {
         };
 
         fetchData();
+
+        window.addEventListener("focus", onFocus);
+        // Specify how to clean up after this effect:
+        return () => {
+            window.removeEventListener("focus", onFocus);
+        };
     }, [authRequired]);
 
     return (
