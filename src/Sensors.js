@@ -66,7 +66,8 @@ export default function SensorsCard(props) {
                 <TableHead>
                     <TableRow>
                         <TableCell>Sensor</TableCell>
-                        <TableCell align="right">Reading</TableCell>
+                        <TableCell align="right">Temp</TableCell>
+                        <TableCell align="right">%RH</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -77,6 +78,9 @@ export default function SensorsCard(props) {
                                     <TableCell>{sensor.name}</TableCell>
                                     <TableCell align="right">
                                         {getReading(sensor.sensor_id, 'temperature')}&deg;C
+                                    </TableCell>
+                                    <TableCell align="right">
+                                        {getReading(sensor.sensor_id, 'humidity')}%
                                     </TableCell>
                                 </TableRow>
                             )
